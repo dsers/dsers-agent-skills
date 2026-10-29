@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "dsers-agent-skills",
+  "description": "The DSers dropshipping skill for dropshippers, from DSers.",
+  "owner": {
+    "name": "DSers",
+    "url": "https://www.dsers.com"
+  },
+  "plugins": [
+    {
+      "name": "dsers-dropshipping",
+      "description": "A dropshipping skill from DSers for dropshippers: check whether each product really makes a profit, handle supplier and order problems such as stockouts, late parcels, refunds, and disputes, clean up imported supplier listings, and check a dropship store before launch. Works on its own. Connect DSers MCP, the official MCP server from DSers for AI-powered dropshipping automation, to source and import products from AliExpress, 1688, and Alibaba.com, connect them to your store, manage suppliers and orders, automate fulfillment, and sync tracking — all in one conversation.",
+      "version": "0.1.0",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

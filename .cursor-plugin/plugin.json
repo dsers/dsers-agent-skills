@@ -1,0 +1,32 @@
+{
+  "name": "dsers-dropshipping",
+  "version": "0.1.0",
+  "description": "A dropshipping skill from DSers for dropshippers: check whether each product really makes a profit, handle supplier and order problems such as stockouts, late parcels, refunds, and disputes, clean up imported supplier listings, and check a dropship store before launch. Works on its own. Connect DSers MCP, the official MCP server from DSers for AI-powered dropshipping automation, to source and import products from AliExpress, 1688, and Alibaba.com, connect them to your store, manage suppliers and orders, automate fulfillment, and sync tracking — all in one conversation.",
+  "author": {
+    "name": "DSers",
+    "url": "https://www.dsers.com"
+  },
+  "homepage": "https://www.dsers.com",
+  "repository": "https://github.com/dsers/dsers-agent-skills",
+  "license": "MIT-0",
+  "keywords": [
+    "dsers",
+    "dropshipping",
+    "dropship",
+    "dropshipper",
+    "shopify",
+    "aliexpress",
+    "ecommerce",
+    "profit",
+    "pricing",
+    "suppliers",
+    "chargebacks",
+    "product-listing",
+    "mcp",
+    "ai-agent",
+    "alibaba",
+    "1688"
+  ],
+  "skills": "./skills/",
+  "logo": "assets/logo.png"
+}
