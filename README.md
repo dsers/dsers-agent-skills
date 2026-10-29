@@ -78,8 +78,8 @@ DSers MCP works alongside the DSers dashboard.
 You need:
 
 - A DSers account. [Sign up](https://accounts.dsers.com/accounts/register?utm_source=agent_skills&utm_medium=ai_assistant&utm_campaign=dsers_dropshipping&utm_content=readme)
-- A DSers plan that includes MCP Connection. See the [DSers pricing page](https://www.dsers.com/pricing).
-- At least one Shopify or Wix store connected in DSers, for tasks that touch your store.
+- A DSers Advanced, Pro, or Enterprise plan. These plans include MCP Connection; Basic does not ([DSers MCP documentation](https://www.dsers.com/en/mcp-server), [DSers pricing page](https://www.dsers.com/pricing)).
+- At least one Shopify or Wix store connected in DSers.
 
 Then add the DSers MCP server `https://ai.dsers.com/mcp` to your AI app and sign in to DSers in the browser window that opens. Do not paste passwords, API keys, or tokens into your app's configuration.
 

@@ -1,7 +1,7 @@
 {
   "name": "dsers-dropshipping",
-  "version": "0.1.1",
-  "description": "A dropshipping skill from DSers for dropshippers: check whether each product really makes a profit, handle supplier and order problems such as stockouts, late parcels, refunds, and disputes, clean up imported supplier listings, and check a dropship store before launch. Works on its own. Connect DSers MCP, the official MCP server from DSers for AI-powered dropshipping automation, to source and import products from AliExpress, 1688, and Alibaba.com, connect them to your store, manage suppliers and orders, automate fulfillment, and sync tracking — all in one conversation.",
+  "version": "0.1.2",
+  "description": "A dropshipping skill from DSers for dropshippers: check whether each product really makes a profit, handle supplier and order problems such as stockouts, late parcels, refunds, and disputes, clean up imported supplier listings, and check a dropship store before launch. Works on its own. Connect DSers MCP, the official MCP server from DSers for AI-powered dropshipping automation, to move from product discovery to listings, store operations, orders, fulfillment, and delivery tracking — all in one conversation.",
   "author": {
     "name": "DSers",
     "url": "https://www.dsers.com"
@@ -31,7 +31,7 @@
   "interface": {
     "displayName": "DSers Dropshipping",
     "shortDescription": "Dropshipping help from DSers",
-    "longDescription": "A dropshipping skill from DSers for dropshippers, for the problems that cost money: whether each product really makes a profit after fees, ads, refunds, and duties; supplier and order problems such as stockouts, late parcels, refunds, and payment disputes; cleaning up products imported from AliExpress and other suppliers; and a pre-launch store check against payment, Google, ad, and US, EU, and UK consumer rules, with official sources. Connect DSers MCP, the official MCP server from DSers for AI-powered dropshipping automation, to source and import products from AliExpress, 1688, and Alibaba.com, connect them to your store, manage suppliers and orders, automate fulfillment, and sync tracking — all in one conversation; changes to your DSers account are saved only after you confirm each one. DSers helps sellers spend less time on repetitive operations and more time building their business.",
+    "longDescription": "A dropshipping skill from DSers for dropshippers, for the problems that cost money: whether each product really makes a profit after fees, ads, refunds, and duties; supplier and order problems such as stockouts, late parcels, refunds, and payment disputes; cleaning up products imported from AliExpress and other suppliers; and a pre-launch store check against payment, Google, ad, and US, EU, and UK consumer rules, with official sources. Connect DSers MCP, the official MCP server from DSers for AI-powered dropshipping automation, to move from product discovery to listings, store operations, orders, fulfillment, and delivery tracking — all in one conversation; changes to your DSers account are saved only after you confirm each one. DSers helps sellers spend less time on repetitive operations and more time building their business.",
     "developerName": "DSers",
     "category": "Business & Operations",
     "capabilities": [
