@@ -1,5 +1,7 @@
 # DSers Dropshipping Skill
 
+Made by DSers · [www.dsers.com](https://www.dsers.com/?utm_source=agent_skills&utm_medium=ai_assistant&utm_campaign=dsers_dropshipping&utm_content=readme)
+
 The official DSers Agent Skill for dropshippers. It works in AI apps that support Agent Skills, such as Claude, Codex, Cursor, OpenClaw, Hermes Agent, and Gemini CLI, and helps with the problems that cost a dropship store money:
 
 | Job | What it helps with |
@@ -31,6 +33,12 @@ npx skills add dsers/dsers-agent-skills
 ```
 
 Choose your app when asked.
+
+**OpenClaw** can also install it from [ClawHub](https://clawhub.ai/dsers/skills/dsers-dropshipping):
+
+```bash
+clawhub install @dsers/dsers-dropshipping
+```
 
 **Hermes Agent** can also install it directly:
 
