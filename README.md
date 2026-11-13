@@ -89,7 +89,7 @@ You need:
 - A DSers Advanced, Pro, or Enterprise plan. These plans include MCP Connection; Basic does not ([DSers MCP documentation](https://www.dsers.com/en/mcp-server), [DSers pricing page](https://www.dsers.com/pricing)).
 - At least one Shopify or Wix store connected in DSers.
 
-Then add the DSers MCP server `https://ai.dsers.com/mcp` to your AI app and sign in to DSers in the browser window that opens. Do not paste passwords, API keys, or tokens into your app's configuration.
+Then add the DSers MCP server to your AI app and sign in to DSers in the browser window that opens. The steps below use `https://ai.dsers.com/mcp/agent-skills`, the entry for connections set up from this repository; Claude uses `https://ai.dsers.com/mcp`, the address of the DSers connector in the Claude directory. Both are the same DSers MCP service with the same tools. Do not paste passwords, API keys, or tokens into your app's configuration.
 
 **Claude Code**: if you installed the plugin above, it adds the server for you; run `/mcp`, select the DSers server, and sign in. Otherwise:
 
@@ -106,7 +106,7 @@ claude mcp login dsers
 **Codex CLI**
 
 ```bash
-codex mcp add dsers --url https://ai.dsers.com/mcp
+codex mcp add dsers --url https://ai.dsers.com/mcp/agent-skills
 ```
 
 ```bash
@@ -118,7 +118,7 @@ codex mcp login dsers
 ```json
 {
   "mcpServers": {
-    "dsers": { "url": "https://ai.dsers.com/mcp" }
+    "dsers": { "url": "https://ai.dsers.com/mcp/agent-skills" }
   }
 }
 ```
@@ -128,7 +128,7 @@ codex mcp login dsers
 ```json
 {
   "mcpServers": {
-    "dsers": { "httpUrl": "https://ai.dsers.com/mcp" }
+    "dsers": { "httpUrl": "https://ai.dsers.com/mcp/agent-skills" }
   }
 }
 ```
@@ -136,19 +136,19 @@ codex mcp login dsers
 **OpenClaw**
 
 ```bash
-openclaw mcp set dsers '{"url":"https://ai.dsers.com/mcp","transport":"streamable-http","auth":"oauth"}'
+openclaw mcp set dsers '{"url":"https://ai.dsers.com/mcp/agent-skills","transport":"streamable-http","auth":"oauth"}'
 ```
 
 ```bash
 openclaw mcp login dsers
 ```
 
-**Hermes Agent**: add the server to the active profile's `config.yaml` (normally `~/.hermes/config.yaml`), keeping the other entries. The [DSers plugin for Hermes](https://github.com/dsers/dsers-agent-plugin/tree/main/plugins/hermes) uses the same entry. Sign in from a separate terminal, then run `/reload-mcp` in the Hermes session. Run the same sign-in command again when the sign-in expires.
+**Hermes Agent**: add the server to the active profile's `config.yaml` (normally `~/.hermes/config.yaml`), keeping the other entries. The [DSers plugin for Hermes](https://github.com/dsers/dsers-agent-plugin/tree/main/plugins/hermes) asks for the same kind of entry with its own address; if you installed it, keep the plugin's entry. Sign in from a separate terminal, then run `/reload-mcp` in the Hermes session. Run the same sign-in command again when the sign-in expires.
 
 ```yaml
 mcp_servers:
   dsers:
-    url: https://ai.dsers.com/mcp
+    url: https://ai.dsers.com/mcp/agent-skills
     auth: oauth
     trust: untrusted
     strict_redirect_headers: true

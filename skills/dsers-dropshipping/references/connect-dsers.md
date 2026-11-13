@@ -7,13 +7,15 @@ Read this when the user wants this assistant to work in their DSers account, whe
 1. **A DSers account.** New users sign up at [DSers](https://accounts.dsers.com/accounts/register?utm_source=agent_skills&utm_medium=ai_assistant&utm_campaign=dsers_dropshipping&utm_content=connect).
 2. **A DSers plan that includes MCP Connection.** When it is not included, DSers tools return `PLAN_RESTRICTION`, and the error's hint links to the [DSers pricing page](https://www.dsers.com/pricing).
 3. **A connected store** for tasks that touch store products, publishing, or orders.
-4. **The DSers MCP server connected in this app** at `https://ai.dsers.com/mcp`, signed in with the user's DSers account.
+4. **The DSers MCP server connected in this app**, signed in with the user's DSers account.
 
 Ask only about what is missing. If the user already has an account and the tools are simply not connected, go straight to the steps for their app.
 
 ## Connect the DSers MCP server
 
 Work out which app the user is in from your own environment. If you cannot tell, ask. Give only the steps for that app.
+
+Every address in this file is the same DSers MCP service with the same tools. `https://ai.dsers.com/mcp/agent-skills` is the entry for connections set up from this skill. Claude uses `https://ai.dsers.com/mcp`, the address of the DSers connector in the Claude directory. If DSers tools are already available in this app, the connection is done whichever address it uses: do not add a second one.
 
 If you can run shell commands in this app and the user agrees, you may run the commands below for them. The DSers sign-in itself always happens in the browser window that opens, and only the user can complete it.
 
@@ -31,12 +33,12 @@ claude mcp login dsers
 
 **Claude (web and desktop)**: open [DSers in the Claude directory](https://claude.ai/directory/dsers), or go to Customize → Connectors and search for DSers. Add it and sign in to DSers. On Team and Enterprise plans, an owner adds DSers for the organization first.
 
-**ChatGPT**: add `https://ai.dsers.com/mcp` as an app in Developer Mode or the Apps dashboard, sign in to DSers, then turn the app on for the chat.
+**ChatGPT**: add `https://ai.dsers.com/mcp/agent-skills` as an app in Developer Mode or the Apps dashboard, sign in to DSers, then turn the app on for the chat.
 
 **Codex CLI**
 
 ```bash
-codex mcp add dsers --url https://ai.dsers.com/mcp
+codex mcp add dsers --url https://ai.dsers.com/mcp/agent-skills
 ```
 
 ```bash
@@ -48,7 +50,7 @@ codex mcp login dsers
 ```json
 {
   "mcpServers": {
-    "dsers": { "url": "https://ai.dsers.com/mcp" }
+    "dsers": { "url": "https://ai.dsers.com/mcp/agent-skills" }
   }
 }
 ```
@@ -58,7 +60,7 @@ codex mcp login dsers
 ```json
 {
   "mcpServers": {
-    "dsers": { "httpUrl": "https://ai.dsers.com/mcp" }
+    "dsers": { "httpUrl": "https://ai.dsers.com/mcp/agent-skills" }
   }
 }
 ```
@@ -66,19 +68,19 @@ codex mcp login dsers
 **OpenClaw**
 
 ```bash
-openclaw mcp set dsers '{"url":"https://ai.dsers.com/mcp","transport":"streamable-http","auth":"oauth"}'
+openclaw mcp set dsers '{"url":"https://ai.dsers.com/mcp/agent-skills","transport":"streamable-http","auth":"oauth"}'
 ```
 
 ```bash
 openclaw mcp login dsers
 ```
 
-**Hermes Agent**: add the server to the active profile's `config.yaml` (normally `~/.hermes/config.yaml`), keeping the other entries. The DSers plugin for Hermes asks for the same entry, so if it is installed, check that the entry is there. Sign in from a separate terminal, then run `/reload-mcp` in the Hermes session. Run the same sign-in command again when the sign-in expires; `/reload-mcp` does not open the sign-in page.
+**Hermes Agent**: add the server to the active profile's `config.yaml` (normally `~/.hermes/config.yaml`), keeping the other entries. If the DSers plugin for Hermes is installed, it asks for the same kind of entry with its own address: keep the plugin's entry and do not add this one. Sign in from a separate terminal, then run `/reload-mcp` in the Hermes session. Run the same sign-in command again when the sign-in expires; `/reload-mcp` does not open the sign-in page.
 
 ```yaml
 mcp_servers:
   dsers:
-    url: https://ai.dsers.com/mcp
+    url: https://ai.dsers.com/mcp/agent-skills
     auth: oauth
     trust: untrusted
     strict_redirect_headers: true
@@ -88,7 +90,7 @@ mcp_servers:
 hermes mcp login dsers
 ```
 
-**Other apps**: add `https://ai.dsers.com/mcp` as a remote MCP server using Streamable HTTP and OAuth sign-in. Do not add an API key or an `Authorization` header.
+**Other apps**: add `https://ai.dsers.com/mcp/agent-skills` as a remote MCP server using Streamable HTTP and OAuth sign-in. Do not add an API key or an `Authorization` header.
 
 In some apps the new tools appear only in a new conversation or after the server is turned on for the current one. Ask the user to do that if the tools are still missing after sign-in.
 

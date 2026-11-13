@@ -1,6 +1,6 @@
 {
   "name": "dsers-dropshipping",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A dropshipping skill from DSers for dropshippers: check whether each product really makes a profit, handle supplier and order problems such as stockouts, late parcels, refunds, and disputes, clean up imported supplier listings, and check a dropship store before launch. Works on its own. Connect DSers MCP, the official MCP server from DSers for AI-powered dropshipping automation, to move from product discovery to listings, store operations, orders, fulfillment, and delivery tracking — all in one conversation.",
   "author": {
     "name": "DSers",
